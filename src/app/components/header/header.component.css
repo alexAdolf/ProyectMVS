@@ -1,0 +1,13 @@
+.navbar-nav{
+    font-size: medium;
+    transition: 300ms all;
+}
+
+.navbar-nav li a {
+    color: rgb(115, 115, 115);
+}
+
+.navbar-nav li:hover, .active{
+    color: black !important;
+}
+
