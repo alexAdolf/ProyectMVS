@@ -1,9 +1,18 @@
 <h1>{{ title }}</h1>
 <h3 class="subtitle">Peliculas</h3>
 <button class="btn btn-success" (click)="ChangeTitle()"> Cambiar texto </button>
-
 <hr>
-
+<div class="row">
+    <div class="card text-left">
+        <img class="card-img-top" src="holder.js/100px180/" alt="">
+          <div class="card-body">
+              <h2>Mostrar primera pelicula</h2>
+              <h4 class="card-title">{{peliculas[0].title}}</h4>
+              <p class="card-text">Body</p>
+          </div>
+      </div>
+</div>
+<hr>
 <div class="row">
     <div class="col-12">
         <h2>Numero de peliculas</h2> 
@@ -19,11 +28,30 @@
         </p>
     </div>
 </div>
-<div class="card text-left">
-  <img class="card-img-top" src="holder.js/100px180/" alt="">
-    <div class="card-body">
-        <h2>Mostrar primera pelicula</h2>
-        <h4 class="card-title">{{peliculas[0].title}}</h4>
-        <p class="card-text">Body</p>
+
+<div class="row">
+    <div class="col-12">
+        <h2 class="text-muted">Listado de peliculas</h2>
     </div>
+    <div class="text-left mt-2 mb-5" *ngIf="peliculas">
+        <div *ngFor="let pelicula of peliculas; let i = index;">
+            <img class="" width="500px" src="{{pelicula.image}}" alt="{{pelicula.title}}">
+            <div class="card-body">
+                <h2>
+                    {{i}}
+                    {{pelicula.title}}</h2>
+                <h4 class="card-title">{{peliculas[0].title}}</h4>
+                <p class="year"  [class.year-green]="pelicula.year > 2019"
+                                 [class.year-red]="pelicula.year < 2021"
+                                [ngClass]="{
+                                    'year-green': pelicula.year > 2019,
+                                    'year-red': pelicula.year < 2021
+                                }"
+                                >
+                    {{pelicula.year}}
+                </p>
+                <hr>
+            </div>
+        </div>
+      </div>
 </div>

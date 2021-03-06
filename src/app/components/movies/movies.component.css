@@ -1,0 +1,16 @@
+.year-green{
+    background: green;
+    padding: 5px;
+    display: block;
+    width: 100px;
+    text-align: center;
+}
+
+.year-red{
+    background: red;
+    padding: 5px;
+    display: block;
+    width: 100px;
+    text-align: center;
+
+}

@@ -13,9 +13,9 @@ export class MoviesComponent implements OnInit {
   constructor() {
     this.title = "Componente Peliculas";
     this.peliculas = [
-      { title: "Spiderman", image: 'https://dam.smashmexico.com.mx/wp-content/uploads/2019/06/spider-man-far-from-home-fin-mcu-fase-3-razon-kevin-feige-cover.jpg', },
-      { title: "Avengers", image: 'https://cnet1.cbsistatic.com/img/l-xJp5JmvfZUGTVlfJ7O-wVVRTI=/940x0/2019/03/14/70b49c1d-0d3b-4b75-9225-b898b83cdc9a/avengers-endgame-poster-og-social-crop.jpg', },
-      { title: "Batman", image: 'https://media.gq.com.mx/photos/5f8336a73515c53dd2a8653c/master/pass/the-batman-robert-pattinson-matt-reeves.jpg', }
+      { year: 2019, title: "Spiderman", image: 'https://dam.smashmexico.com.mx/wp-content/uploads/2019/06/spider-man-far-from-home-fin-mcu-fase-3-razon-kevin-feige-cover.jpg', },
+      { year: 2020, title: "Avengers", image: 'https://cnet1.cbsistatic.com/img/l-xJp5JmvfZUGTVlfJ7O-wVVRTI=/940x0/2019/03/14/70b49c1d-0d3b-4b75-9225-b898b83cdc9a/avengers-endgame-poster-og-social-crop.jpg', },
+      { year: 2021, title: "Batman", image: 'https://media.gq.com.mx/photos/5f8336a73515c53dd2a8653c/master/pass/the-batman-robert-pattinson-matt-reeves.jpg', }
     ]
    }
 
