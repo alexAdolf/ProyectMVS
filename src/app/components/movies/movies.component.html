@@ -1,3 +1,29 @@
 <h1>{{ title }}</h1>
 <h3 class="subtitle">Peliculas</h3>
 <button class="btn btn-success" (click)="ChangeTitle()"> Cambiar texto </button>
+
+<hr>
+
+<div class="row">
+    <div class="col-12">
+        <h2>Numero de peliculas</h2> 
+    </div>
+    <div class="col-12">
+        <h3 *ngIf="peliculas.length <= 3">
+            hay pocas peliculas:
+        </h3>
+
+        <h3 *ngIf="peliculas.length > 3"> hay muchas peliculas: <span></span> </h3>
+        <p class="text-muted">
+            {{peliculas.length}}
+        </p>
+    </div>
+</div>
+<div class="card text-left">
+  <img class="card-img-top" src="holder.js/100px180/" alt="">
+    <div class="card-body">
+        <h2>Mostrar primera pelicula</h2>
+        <h4 class="card-title">{{peliculas[0].title}}</h4>
+        <p class="card-text">Body</p>
+    </div>
+</div>
