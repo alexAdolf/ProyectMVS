@@ -1,13 +1,22 @@
 <h1 class="subtitle">Test</h1>
 <div class="row">
-    <div class="col-12" *ngIf="name && lastName">
+    <div class="col-12" *ngIf="name && lastName; then siHayParametros else nohayParametros">
         <h2>El nombre es: {{name}}</h2>
+        <hr>
         <h2>El apellido es: {{lastName}}</h2>
     </div>
+    <ng-template #siHayParametros>
+        <h2>El nombre es: {{name}}</h2>
+        <hr>
+        <h2>El apellido es: {{lastName}}</h2>
+    </ng-template>
 
-    <div class="col-12" *ngIf="!name || !lastName">
+    <ng-template #nohayParametros>
         <h2>no hay parametros por url</h2>
-    </div>
+    </ng-template>
+    <!-- <div class="col-12" *ngIf="!name || !lastName">
+        <h2>no hay parametros por url</h2>
+    </div> -->
 
     <div class="col-12">
         <button (click)="redireccion()">Mostrar usuario</button>
