@@ -1,11 +1,19 @@
 
+
 <h2>{{ title }}</h2>
 <h3>{{ commentary}}</h3>
 <h5>{{ year}}</h5>
-
+<div class="center">
+    <section id="content">
 <button (click)="hideMovie()">ocultar</button>
 <div *ngIf="showMovie">
     <app-movies></app-movies>
 </div>
+
+</section>
+
+    
+</div>
+
 
 

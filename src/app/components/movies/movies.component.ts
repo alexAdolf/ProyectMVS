@@ -9,6 +9,7 @@ export class MoviesComponent implements OnInit {
 
   public title: string
   public peliculas: FilmsModule[];
+  public favorita: FilmsModule;
 
   constructor() {
     this.title = "Componente Peliculas";
@@ -37,6 +38,10 @@ export class MoviesComponent implements OnInit {
 
   ngOnDestroy(){
     console.log("Eliminar")
+  }
+
+  mostrarFavorita(event){
+  this.favorita = event.pelicula
   }
 }
 

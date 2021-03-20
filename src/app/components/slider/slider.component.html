@@ -1,8 +1,8 @@
-<div class="container-fluid bg-light h-100">
-    <div class="row justify-content-center p-3">
-       <div class="col-12 text-center">
-        <h1>{{nombre}}</h1>
-        <button class="btn btn-primary">Ir al blog</button>
-       </div>
-    </div>
+
+<div class="pb-4"  id="slider" [ngClass]="{
+    'slider-big': !size  || size == 'big',
+    'slider-small': size == 'small'
+}">
+    <h1>{{nombre}}</h1>
+        <a [routerLink]="['/blog']" class="btn btn-primary mx-auto mb-5" *ngIf="!size || size == 'big'">Ir al blog</a>
 </div>

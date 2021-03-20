@@ -1,16 +1,7 @@
 <app-header></app-header>
-
-<app-slider [nombre]="homeText"
-></app-slider>
-
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8">
-            <router-outlet></router-outlet>
-        </div>
-        <div class="col-lg-4">
-            <app-siderbar></app-siderbar>
-        </div>
+<router-outlet></router-outlet>
+    <div class="p-4">
+        <app-siderbar></app-siderbar>
     </div>
-</div>
+
 <app-footer></app-footer>
