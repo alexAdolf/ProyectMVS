@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ProyectoMVS';
+  public homeText = 'Bienvenido a MVS';
+
 }
