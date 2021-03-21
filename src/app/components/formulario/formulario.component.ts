@@ -6,10 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent implements OnInit {
-
-  constructor() { }
+  public user: any;
+  constructor() {
+    this.user = {
+      nombre: '',
+      apellidos: '',
+      bio: '',
+      genero: '',
+    }
+   }
 
   ngOnInit() {
+  }
+
+  onSubmit(){
+    alert("formulario enviado!!");
+    console.log(this.user);
   }
 
 }

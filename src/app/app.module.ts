@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms'
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MoviesComponent } from './components/movies/movies.component';
@@ -17,6 +18,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { TestComponent } from './components/test/test.component';
 import { PeliculaComponent } from './components/pelicula/pelicula.component';
 import { EsParPipe } from './pipes/espar.pipe'
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { EsParPipe } from './pipes/espar.pipe'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
