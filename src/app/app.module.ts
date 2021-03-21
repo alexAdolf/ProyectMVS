@@ -16,6 +16,7 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 import { ErrorComponent } from './components/error/error.component';
 import { TestComponent } from './components/test/test.component';
 import { PeliculaComponent } from './components/pelicula/pelicula.component';
+import { EsParPipe } from './pipes/espar.pipe'
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { PeliculaComponent } from './components/pelicula/pelicula.component';
     ErrorComponent,
     TestComponent,
     PeliculaComponent,
+    EsParPipe
   ],
   imports: [
     BrowserModule,

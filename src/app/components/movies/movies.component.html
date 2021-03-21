@@ -8,10 +8,13 @@
                 Pelicula favorita
             </h2>
             <h5>
-                {{favorita.title}}
+                {{favorita.title | uppercase}}
             </h5>
             <h6>
-                {{favorita.year}}
+                {{favorita.year | espar }}
+            </h6>
+            <h6>
+                {{this.fecha | date: 'fullDate' }}
             </h6>
         </div>
         <!-- <h1>{{ title }}</h1>
@@ -44,18 +47,15 @@
         </div>
 
 
-        
-            <div id="article" *ngIf="peliculas">
-                <div  *ngFor="let pelicula of peliculas; let i = index;">
-                    <app-pelicula
-                    [pelicula]="pelicula"
-                    (MarcarFavorito)="mostrarFavorita($event)"
-                    >
-                    </app-pelicula>
-                </div>
-             
+
+        <div id="article" *ngIf="peliculas">
+            <div *ngFor="let pelicula of peliculas; let i = index;">
+                <app-pelicula [pelicula]="pelicula" (MarcarFavorito)="mostrarFavorita($event)">
+                </app-pelicula>
             </div>
-        
+
+        </div>
+
 
         <!-- <div class="text-left mt-2 mb-5" *ngIf="peliculas">
                 <div *ngFor="let pelicula of peliculas; let i = index;">
