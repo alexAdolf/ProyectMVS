@@ -22,8 +22,8 @@
         <form class="mid-form" #userForm="ngForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" 
-                #nombre="ngModel" [(ngModel)]="user.nombre" required pattern="[a-zA-Z]+"/>
+                <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="user.nombre" required
+                    pattern="[a-zA-Z]+" />
                 <small class="text-danger" *ngIf="!nombre.valid && nombre.touched">
                     El nombre no es valido
                 </small>
@@ -31,7 +31,7 @@
 
             <div class="form-group">
                 <label for="apellidos">Apellidos</label>
-                <input type="text" name="apellidos" #apellido="ngModel" [(ngModel)]="user.apellidos" required/>
+                <input type="text" name="apellidos" #apellido="ngModel" [(ngModel)]="user.apellidos" required />
                 <small class="text-danger" *ngIf="!apellido.valid && apellido.touched">
                     El apellido no es valido
                 </small>
@@ -46,8 +46,9 @@
             </div>
 
             <div class="form-group radibuttons">
-                <input type="radio" name="genero" value="hombre" #genero="ngModel" [(ngModel)]="user.genero" required /> Hombre
-                <input type="radio" name="genero" value="mujer" #genero="ngModel"[(ngModel)]="user.genero" /> Mujer
+                <input type="radio" name="genero" value="hombre" #genero="ngModel" [(ngModel)]="user.genero" required />
+                Hombre
+                <input type="radio" name="genero" value="mujer" #genero="ngModel" [(ngModel)]="user.genero" /> Mujer
                 <input type="radio" name="genero" value="otro" #genero="ngModel" [(ngModel)]="user.genero" /> Otro
 
                 <small class="text-danger" *ngIf="!genero.valid && genero.touched">
@@ -60,6 +61,15 @@
             <input type="submit" value="Enviar" class="btn btn-success" [disabled]="userForm.invalid" />
 
         </form>
+
+        <div class="row">
+            <div class="col">
+                <h2 class="subheader">Eventps</h2>
+                <button class="btn btn-success" (click)="hasDadoClick()">Dale Click</button>
+                <input type="text" class="form-control" [(ngModel)]="campo" (blur)="hasSalido()" />
+                {{campo}}
+            </div>
+        </div>
 
 
     </section>

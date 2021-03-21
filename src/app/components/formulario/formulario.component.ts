@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioComponent implements OnInit {
   public user: any;
+  public campo: string;
   constructor() {
     this.user = {
       nombre: '',
@@ -24,4 +25,11 @@ export class FormularioComponent implements OnInit {
     console.log(this.user);
   }
 
+  hasDadoClick(){
+    alert("Has dado Click")
+  }
+
+  hasSalido(){
+    alert("Has Salido")
+  }
 }
