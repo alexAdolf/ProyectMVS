@@ -1,5 +1,5 @@
 import { Component, OnInit, DoCheck, OnDestroy } from '@angular/core';
-import { FilmsModule } from '../../films/films.module';
+import { Pelicula} from '../../models/Pelicula';
 import { PeliculaService } from '../../service/pelicula.service';
 
 @Component({
@@ -12,8 +12,8 @@ import { PeliculaService } from '../../service/pelicula.service';
 export class MoviesComponent implements OnInit {
 
   public title: string
-  public peliculas: FilmsModule[];
-  public favorita: FilmsModule;
+  public peliculas: Pelicula[];
+  public favorita: Pelicula;
   public fecha : any;
   
   constructor(

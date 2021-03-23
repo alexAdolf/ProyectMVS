@@ -1,6 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms'
+import { FormsModule } from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http';
+import { Moment } from 'moment';
+import { AngularFileUploaderModule } from "angular-file-uploader";
+
+
+
 
 import { AppRoutingModule, } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,8 +23,13 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 import { ErrorComponent } from './components/error/error.component';
 import { TestComponent } from './components/test/test.component';
 import { PeliculaComponent } from './components/pelicula/pelicula.component';
-import { EsParPipe } from './pipes/espar.pipe'
-import { from } from 'rxjs';
+import { EsParPipe } from './pipes/espar.pipe';
+import { CharacterComponent } from './components/character/character.component';
+import { ArticlesComponent } from './components/articles/articles.component';
+import { MomentModule } from 'angular2-moment';
+import { ArticleComponent } from './components/article/article.component';
+import { SearchComponent } from './components/search/search.component';
+import { ArticleNewComponent } from './components/article-new/article-new.component';
 
 @NgModule({
   declarations: [
@@ -36,12 +47,20 @@ import { from } from 'rxjs';
     ErrorComponent,
     TestComponent,
     PeliculaComponent,
-    EsParPipe
+    EsParPipe,
+    CharacterComponent,
+    ArticlesComponent,
+    ArticleComponent,
+    SearchComponent,
+    ArticleNewComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
+   MomentModule,
+   AngularFileUploaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

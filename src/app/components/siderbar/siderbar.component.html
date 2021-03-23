@@ -1,13 +1,13 @@
 <div class="card text-left">
   <div class="card-body">
-    <h5>Lorem, ipsum.</h5>  
-    <button class="btn btn-success btn-block pb-2">Crear artículo</button>
+    <h5>Puedes hacer esto</h5>  
+    <a [routerLink]="['/blog/crear']" class="btn btn-success btn-block pb-2">Crear artículo</a>
     <hr>
     <h4 class="card-title">Búsqueda</h4>
     <p class="card-text">Encuentra el articulo que buscas</p>
     <hr>
-    <form>
-        <input class="form-control" type="text" name="seacrh" placeholder="Buscar Peliculas">
+    <form #searchForm="ngForm" (ngSubmit)="goSearch()">
+        <input class="form-control" type="text" name="seacrh" placeholder="Buscar Peliculas" [(ngModel)]="searchString">
         <input type="submit" name="submit" value="Buscar" class="btn btn-primary mt-1 btn-block">
     </form>
   </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FilmsModule } from '../../films/films.module';
+import { Pelicula } from '../../models/pelicula';
 
 @Component({
   selector: 'app-pelicula',
@@ -8,7 +8,7 @@ import { FilmsModule } from '../../films/films.module';
 })
 export class PeliculaComponent implements OnInit {
 
-  @Input() pelicula: FilmsModule;
+  @Input() pelicula: Pelicula;
   @Output() MarcarFavorito = new EventEmitter
   constructor() { }
 
