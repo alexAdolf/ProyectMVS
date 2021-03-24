@@ -3,8 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { ArticleNewComponent } from './components/article-new/article-new.component';
 import { ArticleComponent } from './components/article/article.component';
 import { BlogComponent } from './components/blog/blog.component';
-import { CharacterComponent } from './components/character/character.component';
-import { CharactersComponent } from './components/characters/characters.component';
 import { ErrorComponent } from './components/error/error.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { HomeComponent } from './components/home/home.component';
@@ -26,8 +24,6 @@ const routes: Routes = [
   {path: 'peliculas', component:MoviesComponent},
   {path: 'test', component:TestComponent},
   {path: 'test/:name/:lastName', component:TestComponent},// parametros por URL,
-  {path: 'characters', component:CharactersComponent},
-  {path: 'character/:id', component:CharacterComponent},
   {path: '**', component:ErrorComponent}
 ];
 

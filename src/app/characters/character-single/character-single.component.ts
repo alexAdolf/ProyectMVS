@@ -2,16 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { StarWarsService } from '../../service/star-wars.service'
 import { ActivatedRoute } from '@angular/router'
 
-
 @Component({
-  selector: 'app-character',
-  templateUrl: './character.component.html',
-  styleUrls: ['./character.component.css']
+  selector: 'app-character-single',
+  templateUrl: './character-single.component.html',
+  styleUrls: ['./character-single.component.css']
 })
-export class CharacterComponent implements OnInit {
-  
+export class CharacterSingleComponent implements OnInit {
   public character: any; 
-  
   constructor(
     private StarService: StarWarsService,
     private activatedRoute:  ActivatedRoute

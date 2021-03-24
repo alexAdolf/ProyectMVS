@@ -24,13 +24,13 @@ import { ErrorComponent } from './components/error/error.component';
 import { TestComponent } from './components/test/test.component';
 import { PeliculaComponent } from './components/pelicula/pelicula.component';
 import { EsParPipe } from './pipes/espar.pipe';
-import { CharacterComponent } from './components/character/character.component';
 import { ArticlesComponent } from './components/articles/articles.component';
 import { MomentModule } from 'angular2-moment';
 import { ArticleComponent } from './components/article/article.component';
 import { SearchComponent } from './components/search/search.component';
 import { ArticleNewComponent } from './components/article-new/article-new.component';
-import { CharactersComponent } from './components/characters/characters.component';
+
+import { CharactersModule } from './characters/characters.module'
 
 @NgModule({
   declarations: [
@@ -49,20 +49,20 @@ import { CharactersComponent } from './components/characters/characters.componen
     TestComponent,
     PeliculaComponent,
     EsParPipe,
-    CharacterComponent,
     ArticlesComponent,
     ArticleComponent,
     SearchComponent,
     ArticleNewComponent,
-    CharactersComponent,
   ],
   imports: [
     BrowserModule,
+    CharactersModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
    MomentModule,
-   AngularFileUploaderModule
+   AngularFileUploaderModule,
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]
