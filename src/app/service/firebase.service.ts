@@ -19,4 +19,39 @@ export class FirebaseService {
 
     }
   }
+
+  async logout(){
+    try{ // deslogeo
+      const logoutResp = await this.angularFireAuth.auth.signOut();
+      console.log('logout exitoso');
+      localStorage.clear();
+      return logoutResp;
+    } catch(error){
+      console.error('logout error -->', error);
+      return error;
+  
+    }
+  }
+
+  async registerUser(email: string, pass: string){
+    try {
+      const respRegister = await 
+      this.angularFireAuth.auth.createUserWithEmailAndPassword(email, pass);
+      console.log('resp respRegisterUser -->', respRegister);
+      return respRegister.user
+  
+    } catch (error) {
+      
+    }
+  
+  }
+  
+  async currentUser(){
+    try {
+      const currentUserResp = this.angularFireAuth.auth.currentUser;
+      return currentUserResp;
+    } catch (error) {
+      console.log('error current user -->', error);
+    }
+  }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseService } from '../../service/firebase.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  public logout: any
+
+  constructor(
+    private firebaseS: FirebaseService
+  ) { }
 
   ngOnInit() {
+  }
+
+  toLogout(){
+    this.firebaseS.logout().then( resp => {
+      console.log('logout exitoso -->', resp)
+    }).catch(error => {
+      console.log('error logout -->', error)
+    })
   }
 
 }
