@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-6 mx-auto mt-5">
+        <h1>Login</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Ingrese email" formControlName="email">
+                <!--d-->
+                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger pb-0 mt-2">
+                    <p class="font-weight-bold" *ngIf="email.errors.required">
+                        Campo Email es requerido
+                    </p>
+                    <p class="font-weight-bold" *ngIf="email.errors.email">
+                        Formato erroneo
+                    </p>
+                </div>
+
+
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Ingrese contraseña" formControlName="pass">
+                <div *ngIf="pass.invalid && (pass.dirty || pass.touched)" class="alert alert-danger pb-0 mt-2">
+                    <p class="font-weight-bold" *ngIf="pass.errors.required">
+                        Campo Contraseña es requerido
+                    </p>
+                </div>
+            </div>
+            <!--Si el formulario no esta completo se habilita-->
+            <button [disabled]="loginForm.invalid" class="btn btn-primary btn-lg">Ingresar</button>
+        </form>
+    </div>
+</div>

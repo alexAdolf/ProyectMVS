@@ -123,8 +123,13 @@
               "devServerTarget": "ProyectoMVS:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ProyectoMVS"
 }

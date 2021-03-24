@@ -30,7 +30,15 @@ import { ArticleComponent } from './components/article/article.component';
 import { SearchComponent } from './components/search/search.component';
 import { ArticleNewComponent } from './components/article-new/article-new.component';
 
-import { CharactersModule } from './characters/characters.module'
+import { CharactersModule } from './characters/characters.module';
+import { PopUpComponent } from './components/pop-up/pop-up.component';
+import { AuthenticationComponent} from './components/authentication/authentication.component';
+
+import { AngularFireModule } from '@angular/fire';
+import{ AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
+
+import { ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -53,6 +61,8 @@ import { CharactersModule } from './characters/characters.module'
     ArticleComponent,
     SearchComponent,
     ArticleNewComponent,
+    PopUpComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,
@@ -62,6 +72,10 @@ import { CharactersModule } from './characters/characters.module'
     HttpClientModule,
    MomentModule,
    AngularFileUploaderModule,
+   AngularFireAuthModule,
+   AngularFireModule.initializeApp(environment.firebaseConfig),
+   ReactiveFormsModule 
+
  
   ],
   providers: [],

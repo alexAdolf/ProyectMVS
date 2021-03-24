@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fir-proyectmvs": {
+      "hosting": {
+        "ProyectoMVS": [
+          "fir-proyectmvs"
+        ]
+      }
+    }
+  }
+}
