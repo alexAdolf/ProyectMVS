@@ -30,6 +30,7 @@ import { MomentModule } from 'angular2-moment';
 import { ArticleComponent } from './components/article/article.component';
 import { SearchComponent } from './components/search/search.component';
 import { ArticleNewComponent } from './components/article-new/article-new.component';
+import { CharactersComponent } from './components/characters/characters.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { ArticleNewComponent } from './components/article-new/article-new.compon
     ArticleComponent,
     SearchComponent,
     ArticleNewComponent,
+    CharactersComponent,
   ],
   imports: [
     BrowserModule,

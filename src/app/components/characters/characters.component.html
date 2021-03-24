@@ -1,0 +1,5 @@
+<h2>Personajes</h2>
+<ul *ngFor="let character of allCharacters">
+    <li>Nombre: {{ character.name }}</li>
+    <a [routerLink]="['/character', character.id]">detalles</a>
+</ul>

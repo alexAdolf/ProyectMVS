@@ -1,13 +1,8 @@
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-12">
-            <div class="card text-left">
-                <img class="card-img-top" src="holder.js/100px180/" alt="">
-                <div class="card-body">
-                  <h4 class="card-title">Title</h4>
-                  <p class="card-text">Body</p>
-                </div>
-              </div>
-        </div>
-    </div>
-</div>
+<h3>Detalles de {{ character.name}}</h3>
+<img width="200" src="{{ character.image }}" alt="img de {{ character.image}}">
+<ul>
+  <li class="text-success">Nacimiento {{ character.born}}</li>
+  <li class="text-success">Lugar {{ character.homeworld}}</li>
+  <li class="text-success">Maestro {{ character. masters}}</li>
+
+</ul>
