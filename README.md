@@ -1,27 +1,25 @@
-# ProyectoMVS
+Proyecto buscador de peliculas.
+BACKEND
+ Creación bases de datos, colecciones y documentos en Mongo db.
+ Creación modelos
+ Acción para buscar artículos en el API REST.
+ Método para sacar una imagen
+ Buscador para Sacar últimos articulos
+ *******
+ Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.24.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+ Creación de componentes
+ Uso Pipe personalizados
+ Uso (Routing / Rutas), Lazyloading
+ Uso Directivas ngStyle y ngClass
+ Uso Directivas ngIf y ngFor
+ ngTemplate
+ Servicios en Angular
+ Uso modelo y servicio de articulos
+ Peticiones HTTP
+ Muestra listado artículos
+ Guardado de artículos haciendo peticiones http
+al backend.
+Uso de firebase y firestore
+Authentication.
+ 
