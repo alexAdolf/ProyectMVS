@@ -1,0 +1,67 @@
+<div class="row">
+    <div class="col-md-6 mx-auto mt-5">
+        <h1>Register</h1>
+        <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="name" formControlName="name">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="email" formControlName="email">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="password" formControlName="pass">
+            </div>
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger" >
+                <div *ngIf="email.errors.required">
+                    Requerido
+                </div>
+                <div *ngIf="email.errors.email">
+                    Formato Erroneo
+                </div>
+            </div>
+            <div *ngIf="pass.invalid && (pass.dirty || pass.touched)" class="alert alert-danger" >
+                <div *ngIf="pass.errors.required">
+                    Requerido
+                </div>
+                <div *ngIf="pass.errors.minlength">
+                    Six digit is minimum
+                </div>
+            </div>
+            <div class="form-group">
+                <select class="form-control" formControlName="profile">
+                    <option *ngFor="let profile of profiles" [value]="profile">{{ profile }}</option>
+                </select>
+            </div>
+            <div class="form-group">
+              <a class="btn btn-primary" (click)="addPhone()">Add Phone</a>  
+            </div>
+            <div formArrayName="phones" *ngFor="let phone of phones.controls; let i = index">
+               <!--agregar y eliminar-->
+                <div [formGroupName]='i'>
+                    <div class="form-group row">
+                        <!--abrir una instancia para pasarle propiedades-->
+                        <label [attr.for]="'phone' + i" class="col-md-1">Phone</label>
+                        <div class="col-md-12">
+                            <input type="text" [attr.for]="'phone' + i" class="form-control"
+                                formControlName="phone">
+                        </div>
+                        <label [attr.for]="'description' + i" class="col-md-1">Description</label>
+                         <div class="col-md-12">
+                            <input type="text" [attr.for]="'description' + i" class="form-control"
+                                formControlName="description">
+                        </div>
+                        <div class="col-md-8">
+                            <button class="btn btn-danger" (click)="removePhone(i)"> Remove Phone</button>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" formControlName="newsletter">
+                <label for="newsletter">Suscribe to newsletter</label>
+            </div>
+
+            <button [disabled]="registerForm.invalid" class="btn btn-primary btn-lg">Login</button>
+        </form>
+    </div>
+</div>

@@ -37,8 +37,10 @@ import { AuthenticationComponent} from './components/authentication/authenticati
 import { AngularFireModule } from '@angular/fire';
 import{ AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore'
 
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './components/register/register.component'
 
 @NgModule({
   declarations: [
@@ -62,7 +64,8 @@ import { ReactiveFormsModule } from '@angular/forms'
     SearchComponent,
     ArticleNewComponent,
     PopUpComponent,
-    AuthenticationComponent
+    AuthenticationComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +77,9 @@ import { ReactiveFormsModule } from '@angular/forms'
    AngularFileUploaderModule,
    AngularFireAuthModule,
    AngularFireModule.initializeApp(environment.firebaseConfig),
-   ReactiveFormsModule 
+   AngularFirestoreModule,
+   ReactiveFormsModule ,
+   
 
  
   ],

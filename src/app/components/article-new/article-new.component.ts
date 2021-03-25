@@ -65,9 +65,18 @@ export class ArticleNewComponent implements OnInit {
     // console.log(this.article)
   }
 
-  imageUpload(data){
+  imageUpload(data){ debugger;
     let image_data =JSON.parse(data.response);
     this.article.image = image_data.image; 
+  }
+
+  imageUpload2(data){ debugger;
+    const reader = new FileReader();
+        reader.readAsDataURL(data[0]);
+        reader.onload = () => { this.article.image = <string> reader.result }
+      // data = <string> reader.result;
+    // JSON.parse(data.response);
+     
   }
 
 }

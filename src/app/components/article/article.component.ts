@@ -32,7 +32,7 @@ export class ArticleComponent implements OnInit {
       this._articleService.getArticle(id).subscribe(
         response =>{ debugger;
           if(response.status == 'success'){
-            this.article = response.articles;
+            this.article = response.article;
           }else{ 
             this._router.navigate(['/home']);
           }

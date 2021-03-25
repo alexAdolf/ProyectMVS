@@ -14,6 +14,10 @@ export class FirebaseService {
     try{
       const respAuth = await this.angularFireAuth.auth.signInWithEmailAndPassword(email, pass);
       console.log('respuesta Auth-->', respAuth);
+      localStorage.setItem(
+        'email', respAuth.user.email
+      )
+      return respAuth
     }catch(error){
       console.log('error auth -->', error);
 

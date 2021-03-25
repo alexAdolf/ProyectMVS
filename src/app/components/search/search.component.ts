@@ -29,7 +29,7 @@ export class SearchComponent implements OnInit {
       this._articleService.search(search).subscribe(
         response =>{  debugger;
           if(response.status == 'success'){ 
-            this.articles = response.article;
+            this.articles = response.articles;
           }
           console.log(this.articles)
         },

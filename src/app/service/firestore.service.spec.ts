@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { RickAndMortyService } from './rick-and-morty.service';
+import { FirestoreService } from './firestore.service';
 
-describe('RickAndMortyService', () => {
+describe('FirestoreService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: RickAndMortyService = TestBed.get(RickAndMortyService);
+    const service: FirestoreService = TestBed.get(FirestoreService);
     expect(service).toBeTruthy();
   });
 });

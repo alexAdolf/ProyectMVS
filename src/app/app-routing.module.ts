@@ -10,13 +10,15 @@ import { HomeComponent } from './components/home/home.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { MycomponentComponent } from './components/mycomponent/mycomponent.component';
 import { PopUpComponent } from './components/pop-up/pop-up.component';
+import { RegisterComponent } from './components/register/register.component';
 import { SearchComponent } from './components/search/search.component';
 import { TestComponent } from './components/test/test.component';
+import { LoggedGuard } from './guards/logged.guard';
 
 
 const routes: Routes = [
   
-  {path:'home', component:HomeComponent},
+  {path:'home', component:HomeComponent, canActivate: [LoggedGuard]},
   {path: 'inicio', component:MycomponentComponent},
   {path: 'blog', component:BlogComponent},
   {path: 'blog/article/:id', component:ArticleComponent},
@@ -29,6 +31,7 @@ const routes: Routes = [
   {path: 'test', component:TestComponent},
   {path: 'sesion', component:AuthenticationComponent},
   {path: 'test/:name/:lastName', component:TestComponent},// parametros por URL,
+  {path: 'register', component:RegisterComponent},
   {path: '**', component:ErrorComponent}
 ];
 

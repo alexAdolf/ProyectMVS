@@ -1,8 +1,13 @@
 <h3>Detalles de {{ character.name}}</h3>
 <img width="200" src="{{ character.image }}" alt="img de {{ character.image}}">
-<ul>
-  <li class="text-success">Nacimiento {{ character.born}}</li>
-  <li class="text-success">Lugar {{ character.homeworld}}</li>
-  <li class="text-success">Maestro {{ character. masters}}</li>
-
-</ul>
+<div class="container">
+  <div class="col-12">
+    
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Nacimiento {{ character.born}}</li>
+        <li class="list-group-item">Lugar {{ character.homeworld}}</li>
+        <li class="list-group-item">Maestro {{ character. masters}}</li>
+        </ul>
+        
+  </div>
+</div>

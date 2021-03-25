@@ -29,11 +29,12 @@
 
             <div class="form-group">
                 <label for="nombre">Imagen</label>
-                    <angular-file-uploader
+                <input form="form-control" type="file" (change)="imageUpload2($event.target.files)"/> 
+                    <!-- <angular-file-uploader
                             [config]="afuConfig"
                             (ApiResponse)="imageUpload($event)"
                             >
-                    </angular-file-uploader>
+                    </angular-file-uploader> -->
                 
             </div>
 
